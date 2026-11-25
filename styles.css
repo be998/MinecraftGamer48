@@ -1,0 +1,338 @@
+/* Base & Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #edf4ff;
+    background:
+        radial-gradient(circle at 12% 18%, #00eaff38, transparent 30%),
+        radial-gradient(circle at 88% 32%, #7c5cff38, transparent 28%),
+        radial-gradient(circle at 55% 88%, #ff49d038, transparent 32%),
+        linear-gradient(135deg, #080d1a 0%, #10162b 55%, #17122b 100%);
+}
+
+/* Header & Navigation */
+header {
+    padding: 20px 28px;
+    color: white;
+    background:
+        linear-gradient(90deg, #0f1531a8, #111a2b00 45%, #0f1531a8),
+        linear-gradient(110deg, #00d9ff, #7b61ff, #ff55cf, #00d9ff);
+    border-bottom: 1px solid #7d8cffaa;
+    box-shadow:
+        0 8px 34px #4ecfff55,
+        0 0 26px #7b61ff55,
+        inset 0 -2px 18px #ff55cf55;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    text-shadow:
+        0 2px 12px #07111f99,
+        0 0 8px #bafcff,
+        0 0 22px #7b61ff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #f2f7ff;
+    text-decoration: none;
+    text-shadow: 0 1px 8px #10162b, 0 0 10px #66d8ff99;
+    transition: filter 0.2s ease, text-shadow 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #bafcff;
+    text-decoration: underline;
+    text-shadow: 0 0 8px #bafcff, 0 0 18px #00d9ff;
+    filter: drop-shadow(0 0 8px #bafcff) drop-shadow(0 0 14px #00d9ff);
+}
+
+button,
+.button {
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus-visible,
+.button:hover,
+.button:focus-visible {
+    filter: drop-shadow(0 0 8px #bafcff) drop-shadow(0 0 14px #00d9ff);
+    box-shadow: 0 0 14px #bafcff, 0 0 28px #00d9ff, 0 0 42px #7b61ff;
+}
+
+/* Layout */
+main {
+    width: min(1050px, 92%);
+    margin: 28px auto 50px;
+}
+
+.section-title {
+    margin: 30px 0 14px;
+    color: #c8ecff;
+    text-shadow:
+        0 0 8px #bafcff,
+        0 0 18px #69baff99,
+        0 0 32px #7b61ff66;
+}
+
+footer {
+    padding: 20px;
+    color: #e7efff;
+    text-align: center;
+}
+
+/* Profile Section */
+.profile {
+    width: min(100%, 560px);
+    margin: 0 0 24px;
+    padding: 28px;
+    text-align: left;
+    background: linear-gradient(145deg, #171f36ed, #111827f2);
+    border-radius: 16px;
+    border: 1px solid #66cfffaa;
+    box-shadow:
+        0 12px 36px #0009,
+        0 0 24px #66d8ff55,
+        0 0 42px #6d63ff55,
+        inset 0 0 20px #66cfff12;
+    backdrop-filter: blur(12px);
+}
+
+.profile-image {
+    display: block;
+    width: min(300px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 0 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    background: #293442;
+    border: 3px solid #66d8ff;
+    box-shadow:
+        0 0 20px #66d8ff99,
+        0 0 44px #66d8ff66,
+        0 0 70px #8b63ff55;
+}
+
+.profile h2 {
+    margin: 0 0 10px;
+    color: #9eeaff;
+    text-shadow: 0 0 12px #66d8ff99, 0 0 24px #7b61ff77;
+}
+
+.profile p {
+    color: #c1cbdc;
+}
+
+.profile .status {
+    display: inline-block;
+    padding: 5px 12px;
+    color: #e8fbff;
+    background: linear-gradient(90deg, #087f96, #6554c0);
+    border: 1px solid #72dfffaa;
+    border-radius: 999px;
+    box-shadow:
+        0 0 10px #72dfff77,
+        0 0 22px #63cfff66,
+        0 0 34px #6554c077;
+}
+
+/* Cards & Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    padding: 20px;
+    background: linear-gradient(145deg, #171f33f2, #111827f2);
+    border: 1px solid #66a9d888;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 24px #0008,
+        0 0 16px #66cfff22,
+        0 0 30px #7b61ff22,
+        inset 0 1px #a4cfff33,
+        inset 0 0 18px #66cfff0d;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    color: #99dcff;
+    text-shadow: 0 0 10px #66d8ff99, 0 0 20px #7b61ff55;
+}
+
+.card p,
+.card li {
+    color: #c1cbdc;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    color: #a8ebff;
+    font-size: 1.6rem;
+    text-shadow:
+        0 0 8px #c8f4ff,
+        0 0 18px #70cfffaa,
+        0 0 34px #7b61ff88;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.placeholder {
+    color: #c1cbdc;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 420px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: auto;
+    }
+}
+
+footer {
+    background:
+        linear-gradient(90deg, #0f1531a8, #111a2b00 45%, #0f1531a8),
+        linear-gradient(110deg, #00d9ff, #7b61ff, #ff55cf, #00d9ff);
+    margin: 0;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    border-top: 1px solid #a6b1ff;
+    text-shadow:
+        0 0 12px #d5fcff,
+        0 0 28px #00d9ff,
+        0 0 48px #7b61ff,
+        0 0 72px #ff55cf;
+    box-shadow:
+        0 -12px 48px #4ecfffaa,
+        0 -4px 22px #bafcff,
+        0 0 38px #7b61ffdd,
+        0 0 64px #ff55cf88,
+        inset 0 2px 24px #ff55cfaa;
+}
+
+/* Stronger neon glow */
+header {
+    border-bottom-color: #a6b1ff;
+    box-shadow:
+        0 10px 48px #4ecfffff,
+        0 0 38px #7b61ffdd,
+        0 0 64px #ff55cf88,
+        inset 0 -3px 26px #ff55cfaa;
+}
+
+header h1,
+.section-title,
+.profile h2,
+.card h3,
+.stat strong {
+    text-shadow:
+        0 0 10px #d5fcff,
+        0 0 22px #66d8ff,
+        0 0 38px #7b61ff,
+        0 0 58px #ff55cf88;
+}
+
+nav a {
+    text-shadow:
+        0 1px 8px #10162b,
+        0 0 12px #66d8ff,
+        0 0 24px #7b61ff99;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    text-shadow:
+        0 0 12px #d5fcff,
+        0 0 24px #bafcff,
+        0 0 42px #00d9ff;
+}
+
+.profile {
+    border-color: #9ceaff;
+    box-shadow:
+        0 14px 42px #000b,
+        0 0 32px #66d8ffcc,
+        0 0 58px #6d63ffcc,
+        0 0 82px #ff55cf55,
+        inset 0 0 26px #66cfff33;
+}
+
+.profile-image {
+    border-color: #bafcff;
+    box-shadow:
+        0 0 28px #66d8ff,
+        0 0 58px #66d8ffcc,
+        0 0 94px #8b63ffdd,
+        0 0 130px #ff55cf66;
+}
+
+.profile .status {
+    border-color: #bafcff;
+    box-shadow:
+        0 0 14px #72dfff,
+        0 0 30px #63cfffcc,
+        0 0 48px #6554c0cc;
+}
+
+.card {
+    border-color: #91bfffaa;
+    box-shadow:
+        0 10px 30px #0009,
+        0 0 24px #66cfffaa,
+        0 0 44px #7b61ff88,
+        0 0 62px #ff55cf55,
+        inset 0 1px #d4eaff66,
+        inset 0 0 24px #66cfff22;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
